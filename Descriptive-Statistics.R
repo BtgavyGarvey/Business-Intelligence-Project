@@ -53,3 +53,15 @@ View(dailySales_cov)
 dailySales_anova <- aov(M01AB ~ Month + Hour, data = dailySales)
 summary(dailySales_anova)
 
+## Univariate Plots ----
+
+dailySales_plot <- as.numeric(unlist(dailySales[,]))
+hist(dailySales_plot, main = names(dailySales)[])
+
+## Multivariate Plots ----
+if (!is.element("corrplot", installed.packages()[, 1])) {
+  install.packages("corrplot", dependencies = TRUE)
+}
+require("corrplot")
+corrplot(cor(dailySales[, 4]), method = "circle")
+
