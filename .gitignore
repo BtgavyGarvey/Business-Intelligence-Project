@@ -47,3 +47,20 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Ignore RStudio specific files
+.Rproj.user/
+.Rhistory
+
+# Ignore R environment files
+.RData
+.Ruserdata
+
+# Ignore sensitive credentials and keys
+config.yml
+secrets.json
+api_key.txt
+
+# Ignore compiled code
+*.dll
+*.so
