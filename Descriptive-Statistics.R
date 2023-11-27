@@ -48,3 +48,8 @@ summary(dailySales)
 ## Measures of Relationship ----
 dailySales_cov <- cov(dailySales[, 2:12])
 View(dailySales_cov)
+
+# Inferential Statistics ----
+dailySales_anova <- aov(M01AB ~ Month + Hour, data = dailySales)
+summary(dailySales_anova)
+
